@@ -1,11 +1,11 @@
-package com.example.retrofit;
+package com.example.retrofit.infrastructure.posts.retrofit.dto;
 
-import com.google.gson.annotations.SerializedName;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.Builder;
 import lombok.Getter;
 
-public class PostsRequestDto {
+public class PostsRequest {
 
     @Getter
     public static class Create {
@@ -17,7 +17,7 @@ public class PostsRequestDto {
             this.body = body;
         }
 
-        @SerializedName("userId")
+        @JsonProperty("userId")
         private Long userId;
 
         private String title;
